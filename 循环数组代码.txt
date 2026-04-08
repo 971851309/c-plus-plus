@@ -1,0 +1,48 @@
+//1.用数组存放商品信息
+//2.循环读取商品信息
+//3循环地展示商品信息
+//4程序能够循环地进行
+
+#include<iostream>
+#define NUM_OF_GOODS 3
+int main()
+{
+	std::string sNameArray[NUM_OF_GOODS];//商品名称数组
+
+	float fPriceArray[NUM_OF_GOODS] = {12.5, 1.5,5.f };//商品价格
+
+	unsigned int nCountArray[NUM_OF_GOODS];//商品数量
+	for (int i = 0; i < NUM_OF_GOODS; i++ )
+	{//循环体内的操作
+		std::cout << "请输入第" << i + 1 << "个商品名称:";
+
+		std::cin >> sNameArray[i];
+		std::cout << "请输入第" << i + 1 << "个商品数量:";
+
+		std::cin >> nCountArray[i];
+
+
+
+	}
+	//循环输入商品信息
+	for (int i = 0; i < NUM_OF_GOODS; i++)
+	{
+		std::cout << "第" << i + 1 << "个商品:" << sNameArray[i] << "\t" << nCountArray[i] << std::endl;
+
+
+
+
+
+	}
+
+	float fTotal = 0;
+	int i = 0;
+	while (i< NUM_OF_GOODS)
+	{
+		fTotal = fTotal + nCountArray[i] * fPriceArray[i];
+                        i++;
+
+	}
+	std::cout << "商品总价为:" << fTotal;
+	return 0;
+}

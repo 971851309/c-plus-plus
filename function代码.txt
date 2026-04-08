@@ -1,0 +1,32 @@
+#include <iostream>
+//把两个数的值交换sawp一下
+void swap(int &nVar1, int &nVar2);//声明
+int main()
+{
+	int x = 10, y = 20;
+	
+
+
+
+
+
+
+	std::cout << "before:" << x << " \t " << y << std::endl;
+	swap(x, y);//调用
+
+	getchar();
+
+	std::cout << "after:" << x << " \t " << y << std::endl;
+	return 0;
+
+}
+void swap(int& nVar1, int& nVar2)//定义
+{
+	int nTemp = nVar1;
+	nVar1 = nVar2;
+	nVar2 = nTemp;
+
+
+
+
+}

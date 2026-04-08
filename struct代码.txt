@@ -1,0 +1,36 @@
+#include<iostream>
+int main()
+{
+	typedef unsigned int uInt;
+	typedef struct OneStudentAtSchool
+	{
+		
+		uInt nId;
+		std::string sName;
+		uInt nGrade;
+		
+
+
+
+
+
+
+
+	}Student;
+	Student Student1;
+	Student1. nGrade = 3;
+	Student1.nId = 2019001;
+	Student1.sName = "mike";
+	std::cout << Student1.nId << std::endl;
+	std::cout << Student1.nGrade << std::endl; 
+	std::cout << Student1.sName << std::endl;
+	return 0;
+
+
+
+
+
+
+
+
+}

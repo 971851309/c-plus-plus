@@ -1,0 +1,4 @@
+﻿  main.cpp
+F:\codes\YoudaoDemo\SelfShop\SelfShop\src\main.cpp(70,20): warning C4018:  “<”: 有符号/无符号不匹配
+F:\codes\YoudaoDemo\SelfShop\SelfShop\src\main.cpp(77,20): warning C4018:  “<”: 有符号/无符号不匹配
+  SelfShop.vcxproj -> F:\codes\YoudaoDemo\SelfShop\x64\Debug\SelfShop.exe

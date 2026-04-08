@@ -1,0 +1,37 @@
+#include<iostream>
+
+
+//闰年:1是四的倍数2不是100的倍数且3是400的倍数
+int main()
+{
+	long lYear;
+	for (lYear = 1000; lYear <= 2000; lYear++)
+	{
+		if (0 == lYear % 400)
+		{
+			std::cout << lYear << "\t";
+
+
+
+
+		}
+		   else  if (0 == lYear % 400)
+		{
+			if (0 == lYear % 100);
+			else
+			{
+				std::cout << lYear << "\t";
+
+
+
+
+			}
+
+
+
+
+		}
+		
+		std::cin.get();
+		return 0;
+

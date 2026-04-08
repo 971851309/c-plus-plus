@@ -1,0 +1,19 @@
+#include<iostream>
+
+int main()
+{
+	int nVar1 = 10;
+	int nVar2 = 3;
+	float fResult;
+
+	fResult = nVar1 / nVar2;
+	std::cout << fResult << std::endl;//1
+
+	fResult = (float) (nVar1 / nVar2);
+	std::cout << fResult << std::endl;//2
+
+	fResult = (float)nVar1 / nVar2;
+	std::cout << fResult << std::endl;//3
+
+	return 0;
+}

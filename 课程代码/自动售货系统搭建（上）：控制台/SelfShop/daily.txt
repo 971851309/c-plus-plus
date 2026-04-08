@@ -1,0 +1,3 @@
+shamp					35.5	28
+hairca				55.0	20
+tbrush				10.99	36

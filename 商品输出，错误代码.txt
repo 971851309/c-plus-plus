@@ -1,0 +1,158 @@
+//1.用数组存放商品信息
+//2.循环读取商品信息
+//3循环地展示商品信息
+//4程序能够循环地进行
+
+#include<iostream>
+#include<vector>
+#define NUM_OF_GOODS 3
+enum Categogry { FOOD,TOY,DAILY       };
+ typedef  struct OneItemInfo
+
+{
+	std::string sName;
+	float fPrice;
+	Categogry categogry;
+
+
+
+
+
+
+
+}   ItemInfo;
+
+ typedef struct ItemInCart
+ {
+	 unsigned int nItemId;
+	 unsigned int nCount;
+
+
+
+
+
+
+
+ }CartItem;
+
+ ItemInfo priceTable[NUM_OF_GOODS];
+ std::vector<CartItem> cartVec;
+ //在main之外，是全局变量，整个文件的函数都可使用的变量
+ void showAllItem()
+ {
+	 std::cout << "id\t\t商品\t\t价格" << std::endl;
+	 for (int i = 0; i < NUM_OF_GOODS; i++)
+	 {
+		 std::cout << i + 1 << "\t\t" << priceTable[i].sName << "\t\t" << priceTable[i].fPrice << std::endl;
+      }
+	 std::cout << std::endl;
+
+}
+
+
+ void showCart()
+ {
+
+	 std::cout << "购物车情况:" << std::endl;
+	 for (int i = 0;< cartVec.size(); i++)
+	 {
+
+		 std::cout << i + 1 << priceTabe[cartVec[i].nItemd].sName << "\t\t" << cartVec[i].nCount;
+
+
+
+
+
+
+
+
+
+
+	 }std::cout << std::endl;
+ }
+ void addItem()
+ {
+
+	 showAllItem();
+	 CartItem tempItem;//局部变量，存放用户输入
+	 std::cout << "请输入要添加的商品id:" << std::endl;
+	 std::cin >> tempItem.nItemId;
+
+
+	 std::cout << "请输入商品数量:" << std::endl;
+	 std::cin >> tempItem.nCount;
+	 cartVec.push_back(tempItem);
+	 showCart();
+
+
+
+
+ }
+ viod initItemInfo()
+ {
+	 priceTable[0]sName = "milk";  priceTable[0].fPrice = 3.5f;
+	 priceTable[0].category  FOOD; priceTable[1].sName = barbie"；priceTable [1].fPrice=22.f;
+		 priceTable[1].category = TOY; iorpriceTable[2].sName = "tissue"; priceTable[2[].fPrice = 1.5f；priceTable[2].category = DAILY;
+
+
+
+ }
+
+
+
+int main()
+{
+	std::string sNameArray[NUM_OF_GOODS];//商品名称数组
+
+	float fPriceArray[NUM_OF_GOODS] = {12.5, 1.5,5.f };//商品价格
+
+	unsigned int nCountArray[NUM_OF_GOODS];//商品数量
+	for (int i = 0; i < NUM_OF_GOODS; i++ )
+	{//循环体内的操作
+		std::cout << "请输入第" << i + 1 << "个商品名称:";
+
+		std::cin >> sNameArray[i];
+		std::cout << "请输入第" << i + 1 << "个商品数量:";
+
+		std::cin >> nCountArray[i];
+
+
+
+	}
+	//循环输入商品信息
+	for (int i = 0; i < NUM_OF_GOODS; i++)
+	{
+		std::cout << "第" << i + 1 << "个商品:" << sNameArray[i] << "\t" << nCountArray[i] << std::endl;
+
+
+
+
+
+	}
+
+
+
+	float fTotal = 0;
+	int i = 0;
+	while (i< NUM_OF_GOODS)
+	{
+		fTotal = fTotal + nCountArray[i] * fPriceArray[i];
+		i++;
+	}
+	std::cout << "商品总价为:" << fTotal;
+	
+	initIteminfo();
+	do
+	{
+
+
+		addItem();
+		getchar();//把输入流清空
+		
+
+	}while('e' !=getchar())
+
+
+	
+	return 0;
+V V
